@@ -6,7 +6,7 @@
 /*   By: jhvalenc <jhvalenc@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/16 20:00:06 by jhvalenc          #+#    #+#             */
-/*   Updated: 2026/09/17 13:38:09 by jhvalenc         ###   ########.fr       */
+/*   Updated: 2026/09/17 16:16:25 by jhvalenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,6 @@ Bureaucrat::Bureaucrat(const std::string name, int grade) : _name(name), _grade(
         throw GradeTooHighException("Grade too high");
     if (this->_grade > 150)
         throw GradeTooLowException("Grade too low");
-
-    std::cout << "Bureaucrat " << this->_name << " called, with grade of " << this->_grade << '\n';
 }
 
 Bureaucrat::GradeTooHighException::GradeTooHighException(const std::string& msg) : _msgHigh(msg)
