@@ -6,7 +6,7 @@
 /*   By: jhvalenc <jhvalenc@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/16 12:23:07 by jhvalenc          #+#    #+#             */
-/*   Updated: 2026/09/17 12:44:46 by jhvalenc         ###   ########.fr       */
+/*   Updated: 2026/09/17 17:30:51 by jhvalenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 # include <iostream>
 # include <exception>
+
+// Declaración Anticipada
+class   Form;
 
 class   Bureaucrat
 {
@@ -48,9 +51,10 @@ class   Bureaucrat
                 virtual ~GradeTooLowException() throw();
                 virtual const char* what() const throw();
         };
-        // Funiones Miembro
+        // Funciones Miembro
         void    increment();
         void    decrement();
+        void    signForm(Form& form);
         // Getters
         int getGrade(void) const;
         const std::string&    getName(void) const;
