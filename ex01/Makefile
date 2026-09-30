@@ -6,7 +6,7 @@
 #    By: jhvalenc <jhvalenc@student.42urduliz.com>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/09/17 11:08:40 by jhvalenc          #+#    #+#              #
-#    Updated: 2026/09/17 16:54:50 by jhvalenc         ###   ########.fr        #
+#    Updated: 2026/09/18 14:12:49 by jhvalenc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CXX         = c++
 CXXFLAGS    = -Wall -Wextra -Werror -std=c++98
 
 SRCS        = Bureaucrat.cpp \
-	      Form.cpp
+	      Form.cpp \
 	      main.cpp
 
 OBJS        = $(SRCS:.cpp=.o)
