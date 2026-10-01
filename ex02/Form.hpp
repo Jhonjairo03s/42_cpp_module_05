@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AForm.hpp                                          :+:      :+:    :+:   */
+/*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhvalenc <jhvalenc@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/17 16:57:35 by jhvalenc          #+#    #+#             */
-/*   Updated: 2026/10/01 11:32:54 by jhvalenc         ###   ########.fr       */
+/*   Updated: 2026/09/17 17:50:42 by jhvalenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AFORM_H
-# define AFORM_H
+#ifndef FORM_H
+# define FORM_H
 
 # include "Bureaucrat.hpp"
 
-class   AForm
+class   Form
 {
     private:
         const std::string   _name;
@@ -24,12 +24,12 @@ class   AForm
         const int           _executeGrade;
     public:
         // Forma Canónica Ortodoxa
-        AForm();
-        AForm(const AForm& other);
-        AForm&   operator=(const AForm& other);
-        ~AForm();
+        Form();
+        Form(const Form& other);
+        Form&   operator=(const Form& other);
+        ~Form();
         // Constructor parametrizado
-        AForm(const std::string name, int sign_grade, int execute_grade);
+        Form(const std::string name, int sign_grade, int execute_grade);
         //Herencia exception
         class   GradeTooHighException : public std::exception
         {
@@ -51,7 +51,6 @@ class   AForm
         };
         // Función Miembro
         void    beSigned(Bureaucrat& bureaucrat);
-        virtual void    execute(Bureaucrat const & executor);
         // Getters
         const std::string&    getName(void) const;
         bool    getSigned(void) const;
@@ -59,6 +58,6 @@ class   AForm
         int     getExecuteGrade(void) const;
 };
 
-std::ostream&   operator<<(std::ostream& os, const AForm& form);
+std::ostream&   operator<<(std::ostream& os, const Form& form);
 
 #endif
