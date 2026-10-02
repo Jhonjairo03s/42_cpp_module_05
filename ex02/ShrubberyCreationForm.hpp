@@ -6,7 +6,7 @@
 /*   By: jhvalenc <jhvalenc@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/01 14:08:58 by jhvalenc          #+#    #+#             */
-/*   Updated: 2026/10/02 19:28:00 by jhvalenc         ###   ########.fr       */
+/*   Updated: 2026/10/02 19:39:44 by jhvalenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ class   ShrubberyCreationForm : public AForm
                 NotSignedException(const std::string& msg);
                 virtual ~NotSignedException() throw();
                 virtual const char* what() const throw();
-        }
+        };
         // Función miembro
         void execute(Bureaucrat const& executor) const;
 };
