@@ -6,7 +6,7 @@
 /*   By: jhvalenc <jhvalenc@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/02 12:36:48 by jhvalenc          #+#    #+#             */
-/*   Updated: 2026/10/02 18:48:15 by jhvalenc         ###   ########.fr       */
+/*   Updated: 2026/10/02 19:19:13 by jhvalenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,25 @@ const char* ShrubberyCreationForm::NotSignedException::what() const throw()
 
 void    ShrubberyCreationForm::execute(Bureaucrat const& executor) const
 {
+    std::string     filename;
+    std::ofstream   file;
+
     if (this->getSigned() == false)
         throw NotSignedException("Form is not signed!");
     if (executor.getGrade() > this->getExecuteGrade())
         throw AForm::GradeTooLowException("Grade is too low to execute");
+    filename = this->_target + "_shrubbery";
+    file.open(filename.c_str(), std::ios::out);
+    if (!file)
+        std::cerr << "Error: Could not open file " << filename << '\n';
+    file << "       _-_" << '\n';
+    file << "    /~~   ~~\\" << '\n';
+    file << " /~~         ~~\\" << '\n';
+    file << "{               }" << '\n';
+    file << " \\  _-     -_ /" << '\n';
+    file << "   ~  \\\\ //  ~" << '\n';
+    file << "_- -   | | _- _" << '\n';
+    file << "  _ -  | |   -_" << '\n';
+    file << "      // \\\\" << '\n';
+    file.close();
 }
