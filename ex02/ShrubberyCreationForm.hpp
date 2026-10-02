@@ -6,7 +6,7 @@
 /*   By: jhvalenc <jhvalenc@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/01 14:08:58 by jhvalenc          #+#    #+#             */
-/*   Updated: 2026/10/02 18:56:58 by jhvalenc         ###   ########.fr       */
+/*   Updated: 2026/10/02 19:28:00 by jhvalenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "AForm.hpp"
 # include <iostream>
+# include <fstream>
 
 class   ShrubberyCreationForm : public AForm
 {
