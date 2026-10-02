@@ -6,7 +6,7 @@
 /*   By: jhvalenc <jhvalenc@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/17 16:57:35 by jhvalenc          #+#    #+#             */
-/*   Updated: 2026/10/01 13:29:11 by jhvalenc         ###   ########.fr       */
+/*   Updated: 2026/10/02 13:06:40 by jhvalenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class   AForm
 {
-    private:
+    protected:
         const std::string   _name;
         bool                _signed;
         const int           _signGrade;
@@ -27,7 +27,7 @@ class   AForm
         AForm();
         AForm(const AForm& other);
         AForm&   operator=(const AForm& other);
-        ~AForm();
+        virtual ~AForm();
         // Constructor parametrizado
         AForm(const std::string name, int sign_grade, int execute_grade);
         //Herencia exception
@@ -51,6 +51,7 @@ class   AForm
         };
         // Función Miembro
         void    beSigned(Bureaucrat& bureaucrat);
+        // Abstracta
         virtual void    execute(Bureaucrat const & executor) const = 0;
         // Getters
         const std::string&    getName(void) const;
