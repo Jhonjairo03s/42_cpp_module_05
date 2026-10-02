@@ -6,7 +6,7 @@
 /*   By: jhvalenc <jhvalenc@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/01 14:08:58 by jhvalenc          #+#    #+#             */
-/*   Updated: 2026/10/02 14:08:19 by jhvalenc         ###   ########.fr       */
+/*   Updated: 2026/10/02 18:56:58 by jhvalenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,18 @@ class   ShrubberyCreationForm : public AForm
         ~ShrubberyCreationForm();
         // Constructor parametrizado
         ShrubberyCreationForm(const std::string target);
+        // Herencia exception
+        class   NotSignedException : public std::exception
+        {
+            private:
+                std::string _msgNotSign;
+            public:
+                NotSignedException(const std::string& msg);
+                virtual ~NotSignedException() throw();
+                virtual const char* what() const throw();
+        }
         // Función miembro
-        void execute(Bureaucrat const & executor) const;
+        void execute(Bureaucrat const& executor) const;
 };
 
 #endif
