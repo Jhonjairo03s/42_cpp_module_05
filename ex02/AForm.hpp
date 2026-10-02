@@ -6,7 +6,7 @@
 /*   By: jhvalenc <jhvalenc@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/17 16:57:35 by jhvalenc          #+#    #+#             */
-/*   Updated: 2026/10/02 13:06:40 by jhvalenc         ###   ########.fr       */
+/*   Updated: 2026/10/02 18:21:42 by jhvalenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ class   AForm
         // Función Miembro
         void    beSigned(Bureaucrat& bureaucrat);
         // Abstracta
-        virtual void    execute(Bureaucrat const & executor) const = 0;
+        virtual void    execute(Bureaucrat const& executor) const = 0;
         // Getters
         const std::string&    getName(void) const;
         bool    getSigned(void) const;
