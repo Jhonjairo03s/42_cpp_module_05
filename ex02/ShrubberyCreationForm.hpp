@@ -6,7 +6,7 @@
 /*   By: jhvalenc <jhvalenc@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/01 14:08:58 by jhvalenc          #+#    #+#             */
-/*   Updated: 2026/10/02 19:39:44 by jhvalenc         ###   ########.fr       */
+/*   Updated: 2026/10/03 14:43:14 by jhvalenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 # define SHRUBBERYCREATIONFORM_HPP
 
 # include "AForm.hpp"
-# include <iostream>
 # include <fstream>
+# include <ctime>
 
 class   ShrubberyCreationForm : public AForm
 {
@@ -30,6 +30,7 @@ class   ShrubberyCreationForm : public AForm
         // Constructor parametrizado
         ShrubberyCreationForm(const std::string target);
         // Herencia exception
+        /*
         class   NotSignedException : public std::exception
         {
             private:
@@ -39,8 +40,9 @@ class   ShrubberyCreationForm : public AForm
                 virtual ~NotSignedException() throw();
                 virtual const char* what() const throw();
         };
+        */
         // Función miembro
-        void execute(Bureaucrat const& executor) const;
+        void    execute(Bureaucrat const& executor) const;
 };
 
 #endif

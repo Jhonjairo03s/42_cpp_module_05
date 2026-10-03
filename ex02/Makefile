@@ -6,7 +6,7 @@
 #    By: jhvalenc <jhvalenc@student.42urduliz.com>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/10/02 19:24:45 by jhvalenc          #+#    #+#              #
-#    Updated: 2026/10/02 19:25:37 by jhvalenc         ###   ########.fr        #
+#    Updated: 2026/10/03 14:46:01 by jhvalenc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ CXXFLAGS    = -Wall -Wextra -Werror -std=c++98
 SRCS        = Bureaucrat.cpp \
 	      AForm.cpp \
 	      ShrubberyCreationForm.cpp \
+	      RobotomyRequestForm.cpp \
 	      main.cpp
 
 OBJS        = $(SRCS:.cpp=.o)

@@ -6,7 +6,7 @@
 /*   By: jhvalenc <jhvalenc@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/01 13:33:49 by jhvalenc          #+#    #+#             */
-/*   Updated: 2026/10/01 13:49:36 by jhvalenc         ###   ########.fr       */
+/*   Updated: 2026/10/03 14:08:32 by jhvalenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,8 @@ AForm::~AForm()
     std::cout << "Destructor called" << '\n';
 }
 
-AForm::AForm(const std::string name, int sign_grade, int execute_grade) : _name(name) , _signed(false), _signGrade(sign_grade) , _executeGrade(execute_grade)
+AForm::AForm(const std::string name, int sign_grade, int execute_grade) 
+    : _name(name) , _signed(false), _signGrade(sign_grade) , _executeGrade(execute_grade)
 {
     if (this->_signGrade < 1)
         throw GradeTooHighException("Grade too high");
@@ -72,6 +73,20 @@ AForm::GradeTooLowException::~GradeTooLowException() throw()
 const char* AForm::GradeTooLowException::what() const throw()
 {
     return (_msgLow.c_str());
+}
+
+AForm::NotSignedException::NotSignedException(const std::string& msg)
+    : _msgNotSign(msg)
+{
+}
+
+AForm::NotSignedException::~NotSignedException() throw()
+{
+}
+
+const char* AForm::NotSignedException::what() const throw()
+{
+    return (_msgNotSign.c_str());
 }
 
 void    AForm::beSigned(Bureaucrat& bureaucrat)
