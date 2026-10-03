@@ -6,7 +6,7 @@
 #    By: jhvalenc <jhvalenc@student.42urduliz.com>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/10/02 19:24:45 by jhvalenc          #+#    #+#              #
-#    Updated: 2026/10/03 14:46:01 by jhvalenc         ###   ########.fr        #
+#    Updated: 2026/10/03 15:20:23 by jhvalenc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ SRCS        = Bureaucrat.cpp \
 	      AForm.cpp \
 	      ShrubberyCreationForm.cpp \
 	      RobotomyRequestForm.cpp \
+	      PresidentialPardonForm \
 	      main.cpp
 
 OBJS        = $(SRCS:.cpp=.o)
