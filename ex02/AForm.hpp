@@ -6,7 +6,7 @@
 /*   By: jhvalenc <jhvalenc@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/17 16:57:35 by jhvalenc          #+#    #+#             */
-/*   Updated: 2026/10/02 18:21:42 by jhvalenc         ###   ########.fr       */
+/*   Updated: 2026/10/03 14:04:02 by jhvalenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,15 @@ class   AForm
             public:
                 GradeTooLowException(const std::string& msg);
                 virtual ~GradeTooLowException() throw();
+                virtual const char* what() const throw();
+        };
+        class   NotSignedException : public std::exception
+        {
+            private:
+                std::string _msgNotSign;
+            public:
+                NotSignedException(const std::string& msg);
+                virtual ~NotSignedException() throw();
                 virtual const char* what() const throw();
         };
         // Función Miembro
