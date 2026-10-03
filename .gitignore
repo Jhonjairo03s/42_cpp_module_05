@@ -2,3 +2,4 @@ en.subject.pdf
 *.o
 *.hpp.swp
 *.cpp.swp
+*.swp
